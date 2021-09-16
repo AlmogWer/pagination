@@ -59,9 +59,9 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: var(--clr-grey-10);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: linear-gradient(to right, #ffecd2, #fcb69f);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -133,7 +133,7 @@ Pagination
 .underline {
   width: 8rem;
   height: 0.25rem;
-  background: var(--clr-primary-5);
+  background: #fcb69f;
   margin: 0 auto;
 }
 .followers {
@@ -152,7 +152,7 @@ Pagination
   }
 }
 .card {
-  background: var(--clr-white);
+  background: rgba(255, 255, 255, 0.411);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   padding: 2rem 3.5rem;
@@ -164,6 +164,7 @@ Pagination
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.75rem;
+  border: 0.3rem solid rgb(97, 97, 97);
 }
 
 .card h4 {
@@ -177,12 +178,15 @@ Pagination
   letter-spacing: 1.6px;
   font-size: 0.75rem;
   color: var(--clr-white);
-  background: var(--clr-primary-5);
+  background: #c48d7b;
   border-radius: var(--radius);
   border-color: transparent;
   text-transform: uppercase;
   transition: var(--transition);
   cursor: pointer;
+}
+.btn:hover {
+  background-color: #fcb69f;
 }
 
 .btn-container {
@@ -193,15 +197,15 @@ Pagination
 .page-btn {
   width: 2rem;
   height: 2rem;
-  background: var(--clr-primary-7);
+  background: #c48d7b;
   border-color: transparent;
-  border-radius: 5px;
+  border-radius: 50%;
   cursor: pointer;
   margin: 0.5rem;
   transition: var(--transition);
 }
 .active-btn {
-  background: var(--clr-primary-1);
+  background: #c0775f;
   color: var(--clr-white);
 }
 .prev-btn,
@@ -214,6 +218,7 @@ Pagination
   margin: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
+  color: rgb(100, 100, 100);
 }
 
 @media screen and (min-width: 775px) {

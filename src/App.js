@@ -15,6 +15,20 @@ function App() {
     setPage(index);
   };
 
+  const nextPage = () => {
+    if (page === data.length - 1) {
+      setPage(0);
+    } else {
+      setPage(page + 1);
+    }
+  };
+  const prevPage = () => {
+    if (page === 0) {
+      setPage(data.length - 1);
+    } else {
+      setPage(page - 1);
+    }
+  };
   return (
     <main>
       <div className="section-title">
@@ -28,13 +42,18 @@ function App() {
           })}
         </div>
         <div className="btn-container">
+          <button className="btn next-btn" onClick={() => prevPage()}>
+            {!loading ? "Previous" : null}
+          </button>
           {loading
             ? null
             : data.map((item, index) => {
                 return (
                   <button
                     key={index}
-                    className="page-btn"
+                    className={`page-btn ${
+                      index === page ? "active-btn" : null
+                    }`}
                     onClick={() => {
                       handlePage(index);
                     }}
@@ -43,6 +62,9 @@ function App() {
                   </button>
                 );
               })}
+          <button className="btn next-btn" onClick={() => nextPage()}>
+            {!loading ? "Next" : null}
+          </button>
         </div>
       </section>
     </main>
